@@ -1,7 +1,7 @@
 -- Which country's customers spent the most?
 
-select BillingCountry, Total
+select BillingCountry, SUM(Total)
 FROM Invoice
 GROUP BY BillingCountry
-ORDER BY Total DESC
+ORDER BY SUM(Total) DESC
 LIMIT 1;
