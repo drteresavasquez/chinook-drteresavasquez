@@ -7,4 +7,4 @@ AND al.AlbumId = t.AlbumId
 AND t.TrackId = l.TrackId
 GROUP BY a.Name
 ORDER BY SUM(l.UnitPrice) DESC
-LIMIT 3;
+Limit 3;
