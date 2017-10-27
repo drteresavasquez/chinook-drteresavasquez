@@ -7,3 +7,10 @@ WHERE e.Title = "Sales Support Agent"
 AND c.SupportRepId = e.EmployeeId
 AND c.CustomerId = i.CustomerId
 GROUP BY c.SupportRepId;
+
+-- Without the customerId connection
+
+SELECT e.FirstName, e.LastName, SUM(i.Total) as "Total Sales"
+FROM Employee e, Customer c, Invoice i
+WHERE c.SupportRepid = e.EmployeeId
+GROUP BY e.EmployeeID

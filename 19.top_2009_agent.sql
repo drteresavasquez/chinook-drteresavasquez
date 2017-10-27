@@ -8,5 +8,5 @@ AND i.InvoiceDate GLOB "2009*"
 AND c.SupportRepId = e.EmployeeId
 AND c.CustomerId = i.CustomerId
 GROUP BY c.SupportRepId
-ORDER BY i.total DESC
-LIMIT 1;
+ORDER BY TOTAL (i.total) DESC
+Limit 1;
